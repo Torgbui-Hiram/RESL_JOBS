@@ -151,7 +151,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
-BROKER_URL = 'sqs://{ACCESS_KEY}:{SECRET_KEY}@{REGION}/{QUEUE_NAME}'.format(
+CELERY_BROKER_URL = 'sqs://{ACCESS_KEY}:{SECRET_KEY}@sqs.{REGION}.amazonaws.com/{QUEUE_NAME}'.format(
     ACCESS_KEY=config('ACCESS_KEY'),
     SECRET_KEY=config('SECRET_KEY'),
     REGION=config('REGION'),
