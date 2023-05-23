@@ -1,0 +1,1 @@
+web: gunicorn pendingJob.wsgi --log-file -

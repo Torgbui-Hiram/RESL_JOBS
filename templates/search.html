@@ -1,0 +1,16 @@
+{% include 'base.html' %}
+{% block content %}
+<center>
+    <h1>JOB SEARCH</h1>
+    {% if user.is_authenticated %}
+    {% for names in job %}
+    {{names}} <br>
+    {% endfor %}
+    {% else %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Sorry!</strong> You need to login to access this page
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+</center>
+{% endblock %}

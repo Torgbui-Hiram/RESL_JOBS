@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<center>
+    <br>
+    <h4>Close Job</h4>
+    <form action="" method="POST">
+        {% for fields in form %}
+
+        {% endfor %}
+    </form>
+    <a href="{% url 'mail' %}">Send Reminder</a>
+</center>
+{% endblock %}

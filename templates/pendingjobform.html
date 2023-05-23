@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    center {
+        background-color: #eee;
+        padding: 20px;
+        margin: 20px;
+        width: auto;
+    }
+</style>
+<br>
+<center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="Submit" class="btn btn-secondary">
+    </form>
+</center>
+{% endblock %}
